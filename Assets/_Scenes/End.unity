@@ -212,7 +212,7 @@ GameObject:
   - component: {fileID: 489327949}
   - component: {fileID: 489327952}
   m_Layer: 5
-  m_Name: StartButton
+  m_Name: Restart Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -283,8 +283,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 489327952}
-        m_TargetAssemblyTypeName: StartButtonBehavior, Assembly-CSharp
-        m_MethodName: OnStartButtonPressed
+        m_TargetAssemblyTypeName: RestartButtonBehavior, Assembly-CSharp
+        m_MethodName: OnRestartButtonPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -341,9 +341,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 489327947}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a101d0436c304bf45bdcc8e5135aa9bd, type: 3}
+  m_Script: {fileID: 11500000, guid: 01783942e08e1e747a1fd4e48f0b8e5b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::StartButtonBehavior
+  m_EditorClassIdentifier: Assembly-CSharp::RestartButtonBehavior
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,7 +642,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start
+  m_text: 'Restart '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -734,7 +734,7 @@ GameObject:
   - component: {fileID: 1336670027}
   - component: {fileID: 1336670026}
   m_Layer: 5
-  m_Name: Scene Label
+  m_Name: End Scene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -779,7 +779,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start Scene
+  m_text: End Scene
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
