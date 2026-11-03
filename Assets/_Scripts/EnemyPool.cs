@@ -38,6 +38,9 @@ public class EnemyPool : MonoBehaviour
     // turn it off and put it back so it can be used again
     public void ReturnEnemy(Enemy enemy)
     {
+        // if its already off it is already in the pool (stops adding it twice)
+        if (!enemy.gameObject.activeSelf) return;
+
         enemy.gameObject.SetActive(false);
         availableEnemies.Enqueue(enemy);
     }
