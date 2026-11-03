@@ -1,14 +1,16 @@
 using UnityEngine;
 
-// the bullet flies up and goes back to the pool when it leaves the screen
-public class Bullet : MonoBehaviour
+// base class for all the bullets (this is the "product" from the factory slides)
+// the pool only uses Bullet so it doesnt matter what kind of bullet it is
+public abstract class Bullet : MonoBehaviour
 {
-    [SerializeField] private float speed = 10f;
-
     private float topLimit;
     private BulletPool pool;
 
-    // the factory calls this when it makes the bullet
+    // every bullet type gives its own speed
+    protected abstract float GetSpeed();
+
+    // factory calls this when it makes the bullet
     public void Init(BulletPool owner)
     {
         pool = owner;
@@ -17,8 +19,9 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
-        transform.position += Vector3.up * speed * Time.deltaTime;
+        transform.position += Vector3.up * GetSpeed() * Time.deltaTime;
 
+        // went off the top, put it back in the pool
         if (transform.position.y > topLimit)
         {
             ReturnToPool();
